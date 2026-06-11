@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Panel Clínica</h2>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="card card-kpi">
+
+            <div class="card-body">
+
+                <h5>Servicios</h5>
+
+                <h1>{{ total_servicios }}</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card card-kpi">
+
+            <div class="card-body">
+
+                <h5>Equipos</h5>
+
+                <h1>{{ total_equipos }}</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card card-kpi">
+
+            <div class="card-body">
+
+                <h5>Inspecciones</h5>
+
+                <h1>{{ total_inspecciones }}</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

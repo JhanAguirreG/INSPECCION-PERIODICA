@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Panel Biomédico</h2>
+
+<p>
+Bienvenido {{ request.user.username }}
+</p>
+
+<a href="{% url 'seleccionar' %}" class="btn btn-primary">
+Nueva Inspección
+</a>
+
+{% endblock %}

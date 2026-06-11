@@ -7,3 +7,5 @@ class InspeccionesConfig(AppConfig):
 
     def ready(self):
         import inspecciones.signals
+
+

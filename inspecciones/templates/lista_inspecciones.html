@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Historial de Inspecciones</h2>
+
+<table class="table table-striped">
+
+<thead>
+
+<tr>
+    <th>Fecha</th>
+    <th>Clínica</th>
+    <th>Servicio</th>
+    <th>Consecutivo</th>
+    <th>PDF</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for i in inspecciones %}
+
+<tr>
+
+<td>{{ i.fecha }}</td>
+
+<td>{{ i.institucion.nombre }}</td>
+
+<td>{{ i.servicio.nombre }}</td>
+
+<td>{{ i.consecutivo }}</td>
+
+<td>
+
+{% if i.pdf %}
+<a href="{{ i.pdf.url }}" target="_blank">
+Ver PDF
+</a>
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}
